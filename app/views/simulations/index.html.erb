@@ -1,1 +1,6 @@
-Woohoo! Got <%= @simulation_result %> from C code.
+<div>
+  <p>Woohoo! Got <%= @c_output %> from C code. This took <strong><%= @c_simulation_time %>s</strong>.</p>
+  <p>Woohoo! Got <%= @ruby_output %> from Ruby code. This took <strong><%= @ruby_simulation_time %>s</strong>.</p>
+  <br>
+  <p>That means C code was <%= (@ruby_simulation_time / @c_simulation_time).round %> times faster than Ruby.</p>
+</div>
